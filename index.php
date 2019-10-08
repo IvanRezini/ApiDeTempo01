@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
+
         <?php
-        // put your code here
+       
+        require 'vendor/autoload.php';
+        
+        use GuzzleHttp\Client;
+        
+        $baseUrl = 'https://api.openweathermap.org';
+        $appid = '91053a894f38e61bf8173867de57bf7f';
+        $id = '3468879';
+        $client = new Client(array('base_uri' => $baseUrl));
+        echo 'wgwfgbhfgnhfnfh';
+        $response = $client->get('/data/2.5/weather', array(
+            'query' => array('appid' => '$appid', 'id' => '$id')
+        ));
+echo 'wgwfgbhfgnhfnfh';
+        
         ?>
-    </body>
-</html>
